@@ -1,0 +1,7 @@
+[2021-06-12 14:54:33.500522 +03:00] T["main"] INFO [src/main.rs:104] Resized to 130x51
+[2021-06-12 14:54:33.502527 +03:00] T["main"] INFO [src/main.rs:115] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 65,
+    h: 50,
+}

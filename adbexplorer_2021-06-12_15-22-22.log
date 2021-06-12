@@ -1,0 +1,378 @@
+[2021-06-12 15:22:22.862919 +03:00] T["main"] INFO [src/main.rs:105] Resized to 130x51
+[2021-06-12 15:22:22.865640 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 65,
+    h: 50,
+}
+[2021-06-12 15:22:22.896876 +03:00] T["main"] INFO [src/main.rs:105] Resized to 131x51
+[2021-06-12 15:22:22.898199 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 65,
+    h: 50,
+}
+[2021-06-12 15:22:22.931075 +03:00] T["main"] INFO [src/main.rs:105] Resized to 133x51
+[2021-06-12 15:22:22.932571 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 66,
+    h: 50,
+}
+[2021-06-12 15:22:22.963797 +03:00] T["main"] INFO [src/main.rs:105] Resized to 135x51
+[2021-06-12 15:22:22.965145 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 67,
+    h: 50,
+}
+[2021-06-12 15:22:22.997953 +03:00] T["main"] INFO [src/main.rs:105] Resized to 137x51
+[2021-06-12 15:22:22.999798 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 68,
+    h: 50,
+}
+[2021-06-12 15:22:23.102007 +03:00] T["main"] INFO [src/main.rs:105] Resized to 138x51
+[2021-06-12 15:22:23.104106 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 69,
+    h: 50,
+}
+[2021-06-12 15:22:23.205831 +03:00] T["main"] INFO [src/main.rs:105] Resized to 139x51
+[2021-06-12 15:22:23.207258 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 69,
+    h: 50,
+}
+[2021-06-12 15:22:23.239769 +03:00] T["main"] INFO [src/main.rs:105] Resized to 140x51
+[2021-06-12 15:22:23.241364 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 70,
+    h: 50,
+}
+[2021-06-12 15:22:23.309099 +03:00] T["main"] INFO [src/main.rs:105] Resized to 141x51
+[2021-06-12 15:22:23.310929 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 70,
+    h: 50,
+}
+[2021-06-12 15:22:23.342827 +03:00] T["main"] INFO [src/main.rs:105] Resized to 142x51
+[2021-06-12 15:22:23.344643 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 71,
+    h: 50,
+}
+[2021-06-12 15:22:23.375119 +03:00] T["main"] INFO [src/main.rs:105] Resized to 144x51
+[2021-06-12 15:22:23.377014 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 72,
+    h: 50,
+}
+[2021-06-12 15:22:23.408609 +03:00] T["main"] INFO [src/main.rs:105] Resized to 146x51
+[2021-06-12 15:22:23.410079 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 73,
+    h: 50,
+}
+[2021-06-12 15:22:23.442740 +03:00] T["main"] INFO [src/main.rs:105] Resized to 148x51
+[2021-06-12 15:22:23.444223 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 74,
+    h: 50,
+}
+[2021-06-12 15:22:23.511062 +03:00] T["main"] INFO [src/main.rs:105] Resized to 149x51
+[2021-06-12 15:22:23.512685 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 74,
+    h: 50,
+}
+[2021-06-12 15:22:23.615470 +03:00] T["main"] INFO [src/main.rs:105] Resized to 150x51
+[2021-06-12 15:22:23.617075 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 75,
+    h: 50,
+}
+[2021-06-12 15:22:23.687048 +03:00] T["main"] INFO [src/main.rs:105] Resized to 151x51
+[2021-06-12 15:22:23.688969 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 75,
+    h: 50,
+}
+[2021-06-12 15:22:23.720060 +03:00] T["main"] INFO [src/main.rs:105] Resized to 152x51
+[2021-06-12 15:22:23.722377 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 76,
+    h: 50,
+}
+[2021-06-12 15:22:23.754237 +03:00] T["main"] INFO [src/main.rs:105] Resized to 155x51
+[2021-06-12 15:22:23.756557 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 77,
+    h: 50,
+}
+[2021-06-12 15:22:23.786315 +03:00] T["main"] INFO [src/main.rs:105] Resized to 160x51
+[2021-06-12 15:22:23.789049 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 80,
+    h: 50,
+}
+[2021-06-12 15:22:23.819237 +03:00] T["main"] INFO [src/main.rs:105] Resized to 164x51
+[2021-06-12 15:22:23.821488 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 82,
+    h: 50,
+}
+[2021-06-12 15:22:23.852903 +03:00] T["main"] INFO [src/main.rs:105] Resized to 167x51
+[2021-06-12 15:22:23.855176 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 83,
+    h: 50,
+}
+[2021-06-12 15:22:23.888507 +03:00] T["main"] INFO [src/main.rs:105] Resized to 169x51
+[2021-06-12 15:22:23.890770 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 84,
+    h: 50,
+}
+[2021-06-12 15:22:23.920962 +03:00] T["main"] INFO [src/main.rs:105] Resized to 170x51
+[2021-06-12 15:22:23.923233 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 85,
+    h: 50,
+}
+[2021-06-12 15:22:23.954052 +03:00] T["main"] INFO [src/main.rs:105] Resized to 172x51
+[2021-06-12 15:22:23.956360 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 86,
+    h: 50,
+}
+[2021-06-12 15:22:23.989045 +03:00] T["main"] INFO [src/main.rs:105] Resized to 175x51
+[2021-06-12 15:22:23.991175 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 87,
+    h: 50,
+}
+[2021-06-12 15:22:24.021884 +03:00] T["main"] INFO [src/main.rs:105] Resized to 178x51
+[2021-06-12 15:22:24.024191 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 89,
+    h: 50,
+}
+[2021-06-12 15:22:24.058064 +03:00] T["main"] INFO [src/main.rs:105] Resized to 180x51
+[2021-06-12 15:22:24.060552 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 90,
+    h: 50,
+}
+[2021-06-12 15:22:24.088305 +03:00] T["main"] INFO [src/main.rs:105] Resized to 183x51
+[2021-06-12 15:22:24.090382 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 91,
+    h: 50,
+}
+[2021-06-12 15:22:24.120194 +03:00] T["main"] INFO [src/main.rs:105] Resized to 184x51
+[2021-06-12 15:22:24.122013 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 92,
+    h: 50,
+}
+[2021-06-12 15:22:24.154994 +03:00] T["main"] INFO [src/main.rs:105] Resized to 186x51
+[2021-06-12 15:22:24.157465 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 93,
+    h: 50,
+}
+[2021-06-12 15:22:24.187856 +03:00] T["main"] INFO [src/main.rs:105] Resized to 188x51
+[2021-06-12 15:22:24.189747 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 94,
+    h: 50,
+}
+[2021-06-12 15:22:24.224574 +03:00] T["main"] INFO [src/main.rs:105] Resized to 189x51
+[2021-06-12 15:22:24.226476 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 94,
+    h: 50,
+}
+[2021-06-12 15:22:24.258309 +03:00] T["main"] INFO [src/main.rs:105] Resized to 190x51
+[2021-06-12 15:22:24.260222 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 95,
+    h: 50,
+}
+[2021-06-12 15:22:24.327679 +03:00] T["main"] INFO [src/main.rs:105] Resized to 191x51
+[2021-06-12 15:22:24.329783 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 95,
+    h: 50,
+}
+[2021-06-12 15:22:24.362584 +03:00] T["main"] INFO [src/main.rs:105] Resized to 192x51
+[2021-06-12 15:22:24.364542 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 96,
+    h: 50,
+}
+[2021-06-12 15:22:24.395993 +03:00] T["main"] INFO [src/main.rs:105] Resized to 193x51
+[2021-06-12 15:22:24.398054 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 96,
+    h: 50,
+}
+[2021-06-12 15:22:24.430517 +03:00] T["main"] INFO [src/main.rs:105] Resized to 195x51
+[2021-06-12 15:22:24.432544 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 97,
+    h: 50,
+}
+[2021-06-12 15:22:24.463315 +03:00] T["main"] INFO [src/main.rs:105] Resized to 196x51
+[2021-06-12 15:22:24.465334 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 98,
+    h: 50,
+}
+[2021-06-12 15:22:24.567746 +03:00] T["main"] INFO [src/main.rs:105] Resized to 197x51
+[2021-06-12 15:22:24.569720 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 98,
+    h: 50,
+}
+[2021-06-12 15:22:24.635680 +03:00] T["main"] INFO [src/main.rs:105] Resized to 198x51
+[2021-06-12 15:22:24.637777 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 99,
+    h: 50,
+}
+[2021-06-12 15:22:24.667435 +03:00] T["main"] INFO [src/main.rs:105] Resized to 199x51
+[2021-06-12 15:22:24.669540 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 99,
+    h: 50,
+}
+[2021-06-12 15:22:24.701397 +03:00] T["main"] INFO [src/main.rs:105] Resized to 200x51
+[2021-06-12 15:22:24.703889 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 100,
+    h: 50,
+}
+[2021-06-12 15:22:24.736099 +03:00] T["main"] INFO [src/main.rs:105] Resized to 201x51
+[2021-06-12 15:22:24.738282 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 100,
+    h: 50,
+}
+[2021-06-12 15:22:24.768812 +03:00] T["main"] INFO [src/main.rs:105] Resized to 203x51
+[2021-06-12 15:22:24.771955 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 101,
+    h: 50,
+}
+[2021-06-12 15:22:24.801812 +03:00] T["main"] INFO [src/main.rs:105] Resized to 205x51
+[2021-06-12 15:22:24.804976 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 102,
+    h: 50,
+}
+[2021-06-12 15:22:24.835831 +03:00] T["main"] INFO [src/main.rs:105] Resized to 211x51
+[2021-06-12 15:22:24.838901 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 105,
+    h: 50,
+}
+[2021-06-12 15:22:24.869343 +03:00] T["main"] INFO [src/main.rs:105] Resized to 213x51
+[2021-06-12 15:22:24.871761 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 106,
+    h: 50,
+}
+[2021-06-12 15:22:25.370015 +03:00] T["main"] INFO [src/main.rs:105] Resized to 214x51
+[2021-06-12 15:22:25.372826 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 107,
+    h: 50,
+}
+[2021-06-12 15:22:25.435949 +03:00] T["main"] INFO [src/main.rs:105] Resized to 216x51
+[2021-06-12 15:22:25.438309 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 108,
+    h: 50,
+}
+[2021-06-12 15:22:28.299922 +03:00] T["main"] INFO [src/main.rs:105] Resized to 216x52
+[2021-06-12 15:22:28.302702 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 108,
+    h: 51,
+}
+[2021-06-12 15:22:28.337242 +03:00] T["main"] INFO [src/main.rs:105] Resized to 216x53
+[2021-06-12 15:22:28.339791 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 108,
+    h: 52,
+}
+[2021-06-12 15:22:28.374705 +03:00] T["main"] INFO [src/main.rs:105] Resized to 216x54
+[2021-06-12 15:22:28.377031 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 108,
+    h: 53,
+}
+[2021-06-12 15:22:28.441948 +03:00] T["main"] INFO [src/main.rs:105] Resized to 216x55
+[2021-06-12 15:22:28.444900 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 108,
+    h: 54,
+}
+[2021-06-12 15:22:28.614730 +03:00] T["main"] INFO [src/main.rs:105] Resized to 216x56
+[2021-06-12 15:22:28.617175 +03:00] T["main"] INFO [src/main.rs:116] Layout: Layout {
+    x: 0,
+    y: 0,
+    w: 108,
+    h: 55,
+}
