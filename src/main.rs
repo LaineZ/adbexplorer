@@ -2,17 +2,19 @@ use std::vec;
 
 use anyhow::Result;
 use console_engine::KeyCode;
+use file_operations::Local;
 use flexi_logger::FileSpec;
 use generational_arena::Index;
 use layout::{Direction, LayoutEngine, LayoutSize, LayoutStyle};
 use listbox::ListBox;
 
-use crate::{adb::Adb, modal::Modal};
+use crate::{adb::Adb, file_operations::FileOperations};
 
 mod adb;
 mod layout;
 mod listbox;
 mod modal;
+mod file_operations;
 
 fn resize_layout(main_layout: &mut LayoutEngine, w: u16, h: u16) -> (Index, Index) {
     let left_idx = main_layout.new_node(LayoutStyle::default(), vec![]);
@@ -48,11 +50,15 @@ fn main() -> Result<()> {
 
     // adb
     let mut adb = Adb::new()?;
+    let mut local = Local::new()?;
     adb.populate_devices()?;
 
     let mut files = adb.devices[0].get_files()?;
+    let mut files_local = local.get_files()?;
+
     left.set_content(files);
-    right.set_content(vec!["Yes".to_string(), "No".to_string()]);
+    right.set_content(files_local);
+
 
     flexi_logger::Logger::try_with_str("warn, adbexplorer=debug")
         .unwrap()
@@ -87,7 +93,7 @@ fn main() -> Result<()> {
             files = adb.devices[0].level_up_files()?;
             left.set_content(files);
         }
-        
+
         engine.draw();
 
         if engine.is_key_held(console_engine::KeyCode::Esc) {

@@ -3,6 +3,8 @@ use std::process::Command;
 use anyhow::Context;
 use anyhow::Result;
 
+use crate::file_operations::FileOperations;
+
 pub struct Device {
     name: String,
     authorized: bool,
@@ -23,8 +25,10 @@ impl Device {
             None
         }
     }
+}
 
-    pub fn get_files(&mut self) -> Result<Vec<String>> {
+impl FileOperations for Device {
+    fn get_files(&mut self) -> Result<Vec<String>> {
         let mut adb = Command::new("adb");
         let mut files = Vec::new();
 
@@ -45,18 +49,18 @@ impl Device {
         Ok(files)
     }
 
-    pub fn change_directory_rel(&mut self, path: &str) {
+    fn change_directory_rel(&mut self, path: &str) {
         self.working_directory = format!("{}{}", self.working_directory, path);
     }
 
-    pub fn level_up_files(&mut self) -> Result<Vec<String>> {
+    fn level_up_files(&mut self) -> Result<Vec<String>> {
         let mut splited_path = self.working_directory.split(" ").collect::<Vec<&str>>();
         splited_path.remove(splited_path.len() - 1);
         self.working_directory = splited_path.join("/");
         self.get_files()
     }
 
-    pub fn is_directory(path: String) -> bool {
+    fn is_directory(path: String) -> bool {
         path.ends_with("/")
     }
 }

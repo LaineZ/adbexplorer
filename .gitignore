@@ -1,1 +1,4 @@
 /target
+*.log
+*.txt
+*.code-workspace
