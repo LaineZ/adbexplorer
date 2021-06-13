@@ -5,6 +5,7 @@ use anyhow::Result;
 
 use crate::file_operations::FileOperations;
 
+#[derive(Clone)]
 pub struct Device {
     name: String,
     authorized: bool,
@@ -54,14 +55,18 @@ impl FileOperations for Device {
     }
 
     fn level_up_files(&mut self) -> Result<Vec<String>> {
-        let mut splited_path = self.working_directory.split(" ").collect::<Vec<&str>>();
+        let mut splited_path = self.working_directory.split("/").collect::<Vec<&str>>();
         splited_path.remove(splited_path.len() - 1);
         self.working_directory = splited_path.join("/");
         self.get_files()
     }
 
-    fn is_directory(path: String) -> bool {
+    fn is_directory(&self, path: String) -> bool {
         path.ends_with("/")
+    }
+
+    fn get_working_directory(&self) -> &str {
+        self.working_directory.as_str()
     }
 }
 
