@@ -1,21 +1,25 @@
 use std::vec;
 
+use adb::Device;
+use anyhow::anyhow;
 use anyhow::Result;
+use console_engine::ConsoleEngine;
 use device_filelist::DeviceFilelist;
 use file_operations::{FileOperations, Local};
 use flexi_logger::FileSpec;
 use generational_arena::Index;
 use layout::{Direction, LayoutEngine, LayoutSize, LayoutStyle};
+use modal::modal;
 
 use crate::adb::Adb;
 
 mod adb;
+mod bottom_bar;
+mod device_filelist;
 mod file_operations;
 mod layout;
 mod listbox;
 mod modal;
-mod bottom_bar;
-mod device_filelist;
 
 fn resize_layout(main_layout: &mut LayoutEngine, w: u16, h: u16) -> (Index, Index) {
     let left_idx = main_layout.new_node(LayoutStyle::default(), vec![]);
@@ -35,7 +39,7 @@ fn resize_layout(main_layout: &mut LayoutEngine, w: u16, h: u16) -> (Index, Inde
     return (left_idx, right_idx);
 }
 
-fn main() -> Result<()> {
+fn main() {
     flexi_logger::Logger::try_with_str("warn, adbexplorer=debug")
         .unwrap()
         .log_to_file(FileSpec::default())
@@ -43,8 +47,25 @@ fn main() -> Result<()> {
         .start()
         .unwrap();
 
+    let mut engine = console_engine::ConsoleEngine::init_fill(30)
+        .expect("Unable to create console engine instance");
+    loop {
+        if let Err(err) = main_inner(&mut engine) {
+            let result = modal(
+                &mut engine,
+                format!("Error: {}", err),
+                vec!["Exit", "Restart"],
+            );
+
+            if result.as_str() == "Exit" {
+                break;
+            }
+        }
+    }
+}
+
+fn main_inner(engine: &mut ConsoleEngine) -> Result<()> {
     // UI SETUP
-    let mut engine = console_engine::ConsoleEngine::init_fill(30)?;
     let (cols, rows) = (engine.get_width() as u16, engine.get_height() as u16);
     let mut main_layout = LayoutEngine::new();
     let (left_idx, right_idx) = resize_layout(&mut main_layout, cols, rows);
@@ -55,9 +76,13 @@ fn main() -> Result<()> {
     let mut adb = Adb::new()?;
     let local = Local::new()?;
     adb.populate_devices()?;
+    if adb.devices.is_empty() {
+        return Err(anyhow!(
+            "No adb devices present in system. Check your ADB connection on phone"
+        ));
+    }
+
     let device = adb.devices[0].clone();
-
-
     // SETTING PANES
     let mut device_pane = DeviceFilelist::new(&left_l, device)?;
     let mut local_pane = DeviceFilelist::new(&right_l, local)?;
