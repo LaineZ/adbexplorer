@@ -53,7 +53,7 @@ fn main() {
         if let Err(err) = main_inner(&mut engine) {
             let result = modal(
                 &mut engine,
-                format!("Error: {}", err),
+                format!("Error: {}", err.to_string().replace("\n", " ")),
                 vec!["Exit", "Restart"],
             );
 
@@ -120,7 +120,7 @@ fn main_inner(engine: &mut ConsoleEngine) -> Result<()> {
         engine.draw();
 
         if engine.is_key_held(console_engine::KeyCode::Esc) {
-            break;
+            std::process::exit(0);
         }
 
         if let Some((w, h)) = engine.get_resize() {
@@ -139,6 +139,4 @@ fn main_inner(engine: &mut ConsoleEngine) -> Result<()> {
             log::info!("Layout: {:#?}", left_l);
         }
     }
-
-    Ok(())
 }

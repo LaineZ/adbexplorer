@@ -1,5 +1,6 @@
 use std::process::Command;
 
+use anyhow::anyhow;
 use anyhow::Context;
 use anyhow::Result;
 
@@ -41,10 +42,14 @@ impl FileOperations for Device {
             .output()
             .with_context(|| format!("Failed to create adb process"))?;
 
-        for file in String::from_utf8_lossy(&adb_output_full.stdout)
-            .to_string()
-            .split("\n")
-        {
+        let output_str = String::from_utf8_lossy(&adb_output_full.stdout).to_string();
+        let output_error = String::from_utf8_lossy(&adb_output_full.stderr).to_string();
+
+        if output_str.is_empty() {
+            return Err(anyhow!(output_error));
+        }
+
+        for file in output_str.split("\n") {
             files.push(file.to_string());
         }
         Ok(files)
