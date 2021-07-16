@@ -27,6 +27,37 @@ impl Device {
             None
         }
     }
+
+    pub fn get_name(&self) -> String {
+        return self.name.clone();
+    }
+
+    pub fn transfer_file(&self, file: String) -> Result<()> {
+        let mut adb = Command::new("adb");
+        adb.arg("-s");
+        adb.arg(self.get_name());
+        adb.args(vec!["push", file.as_str(), &self.working_directory, "-p"]);
+
+        log::info!("{} to {}", file, self.working_directory);
+
+        let output_full = adb
+            .output()
+            .with_context(|| format!("Failed to create adb process"))?;
+
+        let output_str = String::from_utf8_lossy(&output_full.stdout).to_string();
+        let output_error = String::from_utf8_lossy(&output_full.stderr).to_string();
+
+        if !output_full.status.success() {
+            return Err(anyhow!(output_str));
+        }
+
+        if output_str.is_empty() {
+            return Err(anyhow!(output_error));
+        }
+
+        log::info!("{}", output_str);
+        Ok(())
+    }
 }
 
 impl FileOperations for Device {

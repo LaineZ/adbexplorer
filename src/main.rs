@@ -1,15 +1,14 @@
-use std::vec;
-
-use adb::Device;
 use anyhow::anyhow;
 use anyhow::Result;
 use console_engine::ConsoleEngine;
+use console_engine::KeyCode;
 use device_filelist::DeviceFilelist;
 use file_operations::{FileOperations, Local};
 use flexi_logger::FileSpec;
 use generational_arena::Index;
 use layout::{Direction, LayoutEngine, LayoutSize, LayoutStyle};
 use modal::modal;
+use std::vec;
 
 use crate::adb::Adb;
 
@@ -76,6 +75,7 @@ fn main_inner(engine: &mut ConsoleEngine) -> Result<()> {
     let mut adb = Adb::new()?;
     let local = Local::new()?;
     adb.populate_devices()?;
+
     if adb.devices.is_empty() {
         return Err(anyhow!(
             "No adb devices present in system. Check your ADB connection on phone"
@@ -111,6 +111,15 @@ fn main_inner(engine: &mut ConsoleEngine) -> Result<()> {
         device_pane.handle_listbox(&engine)?;
         local_pane.handle_listbox(&engine)?;
 
+        if engine.is_key_pressed(KeyCode::F(5)) && local_pane.listbox.focused {
+            device_pane.device_files.transfer_file(format!(
+                "{}/{}",
+                local_pane.device_files.get_working_directory(),
+                local_pane.listbox.get_selected_str()
+            ))?;
+            device_pane.update_filelist()?;
+        }
+
         if device_pane.listbox.focused {
             bottom_bar.set_text(device_pane.device_files.get_working_directory());
         } else {
@@ -119,7 +128,8 @@ fn main_inner(engine: &mut ConsoleEngine) -> Result<()> {
 
         engine.draw();
 
-        if engine.is_key_held(console_engine::KeyCode::Esc) {
+        if engine.is_key_held(KeyCode::Esc) {
+            engine.clear_screen();
             std::process::exit(0);
         }
 

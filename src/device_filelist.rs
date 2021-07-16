@@ -23,11 +23,13 @@ where
 
     pub fn handle_listbox(&mut self, engine: &ConsoleEngine) -> Result<()> {
         self.listbox.handle_events(engine);
-        if self.listbox.focused && engine.is_key_pressed(KeyCode::Enter) {
-            self.device_files
-                .change_directory_rel(self.listbox.get_selected_str().as_str());
-            let files = self.device_files.get_files()?;
-            self.listbox.set_content(files);
+        if self.listbox.focused {
+            if engine.is_key_pressed(KeyCode::Enter) {
+                self.device_files
+                    .change_directory_rel(self.listbox.get_selected_str().as_str());
+                let files = self.device_files.get_files()?;
+                self.listbox.set_content(files);
+            }
         }
 
         if engine.is_key_pressed(KeyCode::Tab) {
@@ -38,6 +40,12 @@ where
             let files = self.device_files.level_up_files()?;
             self.listbox.set_content(files);
         }
+        Ok(())
+    }
+
+    pub fn update_filelist(&mut self) -> Result<()> {
+        let files = self.device_files.get_files()?;
+        self.listbox.set_content(files);
         Ok(())
     }
 }

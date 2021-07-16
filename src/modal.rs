@@ -26,15 +26,21 @@ fn draw_buttons(screen: &mut Screen, buttons: Vec<&str>, selected: usize) {
     }
 }
 
-pub fn modal(engine: &mut ConsoleEngine, message: String, buttons: Vec<&str>) -> String {
-    let w = (message.chars().count() as u32 + 2).clamp(10, engine.get_width());
-    let h = engine.get_height() / 8 as u32;
+fn recompute_sizes(ew: u32, eh: u32, count: u32) -> (i32, i32, u32, u32) {
+    let w = (count + 2).clamp(10, ew);
+    let h = (eh / 4).clamp(5, eh as u32);
     let mut x = 0;
+    let y = eh as i32 / 4;
 
-    if w < engine.get_width() {
-        x = (engine.get_width() as i32 - message.chars().count() as i32) / 2;
+    if w < ew {
+        x = (ew as i32 - count as i32) / 2;
     }
-    let y = engine.get_height() as i32 / 2;
+
+    (x, y, w, h)
+}
+
+pub fn modal(engine: &mut ConsoleEngine, message: String, buttons: Vec<&str>) -> String {
+    let (_, _, w, h) = recompute_sizes(engine.get_width(), engine.get_height(), message.chars().count() as u32);
     let mut screen = Screen::new_fill(w, h, pixel::pxl(' '));
     let mut selected = 0;
 
@@ -53,6 +59,7 @@ pub fn modal(engine: &mut ConsoleEngine, message: String, buttons: Vec<&str>) ->
         engine.clear_screen(); // reset the screen
         engine.check_resize();
         draw_buttons(&mut screen, buttons.clone(), selected);
+        let (x, y, _, _) = recompute_sizes(engine.get_width(), engine.get_height(), message.chars().count() as u32);
         engine.print_screen(x, y, &screen);
         engine.draw();
 
@@ -69,9 +76,26 @@ pub fn modal(engine: &mut ConsoleEngine, message: String, buttons: Vec<&str>) ->
         }
 
         for i in 0..buttons.len() {
-            if engine.is_key_pressed(KeyCode::Char(char::from_digit(i as u32 + 1, 10).unwrap_or('1'))) {
+            if engine.is_key_pressed(KeyCode::Char(
+                char::from_digit(i as u32 + 1, 10).unwrap_or('1'),
+            )) {
                 return buttons[i].to_string();
             }
+        }
+
+        if let Some((new_w, new_h)) = engine.get_resize() {
+            let (_, _, w, h) = recompute_sizes(new_w as u32, new_h as u32, message.chars().count() as u32);
+            screen.resize(w as u32, h as u32);
+            screen.clear();
+            screen.rect_border(
+                0,
+                0,
+                screen.get_width() as i32 - 1,
+                screen.get_height() as i32 - 1,
+                rect_style::BorderStyle::new_light(),
+            );
+            screen.print(1, 1, textwrap::fill(&message, w as usize).as_str());
+            draw_buttons(&mut screen, buttons.clone(), selected);
         }
     }
 }

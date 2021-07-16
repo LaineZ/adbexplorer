@@ -1,5 +1,4 @@
 use std::{env, fs};
-
 use anyhow::Result;
 
 pub struct Local {
@@ -61,7 +60,6 @@ impl FileOperations for Local {
         }
         self.get_files()
     }
-
 
     fn is_directory(&self, path: String) -> bool {
         let md = fs::metadata(path);
